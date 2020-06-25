@@ -37,7 +37,7 @@ public class facebookLogin {
         By signupLoca = By.xpath("//button[@name='websubmit']");
         driver.findElement(signupLoca).click();
 
-        By errorMsgLocator = By.xpath("//div[@id='js_1e0']");
+        By errorMsgLocator = By.xpath("//div[@style='top: 0px;']");
         WebElement errorMsg = driver.findElement(errorMsgLocator);
 
         String expectedErrorMsg = "Please choose a gender. You can change who can see this later.";
