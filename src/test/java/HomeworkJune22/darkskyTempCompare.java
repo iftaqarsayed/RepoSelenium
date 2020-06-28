@@ -23,7 +23,7 @@ public class darkskyTempCompare {
        String feelsValueExceptDegree = feelsValue.substring(0, n1);
        int feelsLikeTemp = Integer.parseInt(feelsValueExceptDegree);
 
-        System.out.println(feelsLikeTemp);
+        System.out.println("Feels like temperature is " + feelsLikeTemp);
        By lowTemperatureLocator = By.xpath("//span[@class='low-temp-text']");
        WebElement lowTemperature = driver.findElement(lowTemperatureLocator);
        String lowTempValue = lowTemperature.getText();
@@ -31,7 +31,7 @@ public class darkskyTempCompare {
        String lowTempExceptDegree = lowTempValue.substring(0, n2);
        int lowTemp = Integer.parseInt(lowTempExceptDegree);
 
-        System.out.println(lowTemp);
+        System.out.println("Low temperature is " +lowTemp);
         By highTempLocator = By.xpath("//span[@class='high-temp-text']");
         WebElement highTemperature = driver.findElement(highTempLocator);
         String highTempValue = highTemperature.getText();
@@ -39,7 +39,7 @@ public class darkskyTempCompare {
         String highTempExceptDegree = highTempValue.substring(0, n3);
         int highTemp = Integer.parseInt(highTempExceptDegree);
 
-        System.out.println(highTemp);
+        System.out.println("High temperature is " + highTemp);
 
         if (feelsLikeTemp>lowTemp && feelsLikeTemp<highTemp ) {
             System.out.println("Feels like temperature (" + feelsLikeTemp + ") is within the low temperature ("
